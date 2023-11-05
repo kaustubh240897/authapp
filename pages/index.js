@@ -61,15 +61,14 @@ export default function Home() {
   }
 
   return (
-    <div className="flex w-full h-screen">
-      <div className="w-2/3 flex items-center justify-center rounded-xl">
-        <div className="w-2/3 bg-[#f1f1f1] border shadow-xl rounded-xl">
+    <div className="grid grid-cols-4 gap-4 h-screen">
+      <div className="col-span-4 lg:col-span-3 flex justify-center items-center">
+        <div className="bg-[#f1f1f1] border shadow-xl rounded-xl mx-4">
           <Tab />
-          {/* <ContactDetailForm /> */}
         </div>
       </div>
-      <div className="w-1/3 flex items-center justify-center border rounded-bl-[250px] bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
-        <div className="">
+      <div className="col-span-4 lg:col-span-1 flex justify-center items-center border rounded-none lg:rounded-bl-[250px] bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+        <div className="mx-auto">
           <div className="w-20 h-20 bg-white rounded-full"></div>
           <h1 className="text-white text-lg font-semibold -mx-2 my-2">
             ByteBreach

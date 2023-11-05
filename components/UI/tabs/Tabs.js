@@ -24,7 +24,15 @@ export default function Tab() {
               }`,
             }}
           >
-            <button className="text-sm font-semibold">Client</button>
+            <button>
+              <span
+                className={`text-sm font-semibold ${
+                  activeTab === 1 ? "tab-button" : ""
+                }`}
+              >
+                Client
+              </span>
+            </button>
           </div>
           <div
             className="w-1/2 py-2 text-center cursor-pointer"
@@ -36,7 +44,15 @@ export default function Tab() {
               }`,
             }}
           >
-            <button className="text-sm font-semibold">Auditors</button>
+            <button className="text-sm font-semibold">
+              <span
+                className={`text-sm font-semibold ${
+                  activeTab === 2 ? "tab-button" : ""
+                }`}
+              >
+                Auditors
+              </span>
+            </button>
           </div>
         </div>
 

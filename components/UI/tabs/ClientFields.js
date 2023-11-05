@@ -114,57 +114,66 @@ export default function ClientFields() {
 
   return (
     <div className="my-4">
-      <div className="mx-20">
+      <div className="mx-6 lg:mx-20">
         <IconButton
           onClick={() => handleSignIn("google")}
           src={GoogleIcon}
           text="Login using your Google Account"
         />
+      </div>
+      <div className="mx-6 lg:mx-20">
         <IconButton
           onClick={() => handleSignIn("github")}
           src={GithubIcon}
           text="Login using your Github Account"
         />
+      </div>
+
+      <div className="mx-6 lg:mx-20">
         <IconButton
           onClick={() => connectwithWallet()}
           src={WalletIcon}
           text="Login using your Wallet"
         />
-        {address ? (
-          <div>
-            <p>Address: {address}</p>
-            <p>ChainId: {chainId}</p>
-          </div>
-        ) : (
-          ""
-        )}
-        {session ? (
-          <div>
-            <p>Email: {session.user.email}</p>
-            <button onClick={() => signOut()}>logout</button>
-          </div>
-        ) : (
-          ""
-        )}
+      </div>
 
+      {/*
+       */}
+
+      {address ? (
         <div>
-          <InputField
-            type="email"
-            src={EmailIcon}
-            label={"Email"}
-            placeholder={"Email Address"}
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            isRequired={true}
-          />
+          <p>Address: {address}</p>
+          <p>ChainId: {chainId}</p>
         </div>
+      ) : (
+        ""
+      )}
+      {session ? (
+        <div>
+          <p>Email: {session.user.email}</p>
+          <button onClick={() => signOut()}>logout</button>
+        </div>
+      ) : (
+        ""
+      )}
 
-        <TextButton
-          href="/dashboard"
-          text={"Submit"}
-          onClick={handleEmailSubmit}
+      <div className="mx-6 lg:mx-20">
+        <InputField
+          type="email"
+          src={EmailIcon}
+          label={"Email"}
+          placeholder={"Email Address"}
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          isRequired={true}
         />
       </div>
+
+      <TextButton
+        href="/dashboard"
+        text={"Submit"}
+        onClick={handleEmailSubmit}
+      />
     </div>
   );
 }

@@ -63,7 +63,7 @@ export default function AuditorsFields() {
 
   return (
     <div className="my-4">
-      <div className="mx-20">
+      <div className="mx-6 lg:mx-20">
         <IconButton
           onClick={() => handleSignIn("google")}
           src={GoogleIcon}
