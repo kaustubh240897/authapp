@@ -63,7 +63,7 @@ export default function ClientFields() {
       connectWallet("injected");
     } else {
       console.log("get metamask");
-      alert("Get MetaMask Wallet first.");
+      alert("Please get MetaMask Wallet in your browser extension.");
     }
   }
   const handleSignIn = async (account) => {
