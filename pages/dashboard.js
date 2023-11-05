@@ -7,7 +7,7 @@ import AuthContext from "@/lib/AuthContext";
 
 export default function Dashboard() {
   const { useremail, setUserEmail } = useContext(AuthContext);
-  console.log("auth", useremail);
+  
   const router = useRouter(); // Add this line
   const { data: session, msg } = useSession();
   const { address, disconnectWallet } = useWeb3();
